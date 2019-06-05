@@ -1,0 +1,332 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ */
+:root {
+    --main-bg-color: #26a69a;
+    --modal-bg-color: #C5E1A5;
+    --hilite-color: #1A237E;
+}
+
+html {
+    font-size: 10px;
+    background-color: var(--main-bg-color);
+    background-size: cover;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+.navstyles {
+    padding-top: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 2rem;
+    background-color: var(--main-bg-color);
+}
+
+nav {
+    margin-bottom: 8px;
+}
+
+.page {
+    display: none;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.2;
+}
+
+/* Material Icon Fonts ***********************/
+/*********************************************/
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'),
+        local('MaterialIcons-Regular'),
+        url(../fonts/MaterialIcons-Regular.woff2) format('woff2'),
+        url(../fonts/MaterialIcons-Regular.woff) format('woff'),
+        url(../fonts/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+.help-icon {
+    background: var(--main-bg-color);
+    color: #006064;
+    display: block;
+    text-align: right;
+}
+
+/*************************************************/
+/* Modal MessageBox Styles */
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 10;
+    /* Sit on top */
+    padding-top: 54vh;
+    /* Location of the box */
+    /*padding-left: 10vw;*/
+    left: 0;
+    top: 0;
+    width: 100vw;
+    min-height: 100vh;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: transparent;
+}
+
+/********* Modal Content *****************************/
+/*****************************************************/
+.modal-content {
+    background-color: var(--modal-bg-color);
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    margin: auto;
+    padding: 10px;
+    width: 80%;
+}
+
+.modal-button {
+    background-color: var(--main-bg-color);
+    border: .2rem solid black;
+    color: black;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#rcorners1 {
+    border-radius: 50%;
+    background: #F44336;
+    padding: 10px;
+}
+
+#rcorners2 {
+    border-radius: 50%;
+    background: #2E7D32;
+    padding: 10px;
+}
+
+#rcorners3 {
+    border-radius: 50%;
+    background: #FF9800;
+    padding: 10px;
+}
+
+#rcorners4 {
+    border-radius: 0%;
+    background: #2196F3;
+    padding: 3px;
+}
+
+/********************* Table Styles ********************/
+/*******************************************************/
+thead {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+tbody {
+    display: block;
+    height: 58vh;
+    overflow-y: scroll;
+}
+
+.tbody-full {
+    display: block;
+    height: 84vh;
+    overflow-y: scroll;
+}
+
+tbody tr {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+table {
+    font-family: arial, sans-serif;
+    font-size: 2rem;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    margin: 0 auto 0 auto;
+}
+
+table,
+td,
+th {
+    border: 1px solid #546E7A;
+    text-align: center;
+    padding: 4px;
+}
+
+td {
+    height: 3rem;
+}
+
+/*Radio Buttons */
+.radio-buttons label {
+    color: black;
+    float: left;
+    margin: 0px;
+    background-color: var(--main-bg-color);
+}
+
+[type="radio"]:checked+span:after {
+    border: 2px solid #004D40;
+    background-color: #004D40;
+}
+
+[type="radio"]:not(:checked)+span,
+[type="radio"]:checked+span {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+[type="checkbox"].filled-in:checked+span:not(.lever):after {
+    top: 0;
+    border: 2px solid teal;
+    background-color: teal;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+[type="checkbox"]+span:not(.lever) {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/*Clock Page ************************/
+.div-contract {
+    position: relative;
+    height: 16vh;
+    margin: 10px auto;
+    background-color: var(--modal-bg-color);
+    color: black;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.div-clock {
+    position: relative;
+    height: 16vh;
+    margin: 10px auto;
+    background-color: red;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#bar-clock-session {
+    position: absolute;
+    height: 100%;
+    text-align: center;
+    font-size: 8rem;
+    background-color: #2E7D32;
+    width: 0;
+    color: #BDBDBD;
+    line-height: 100%;
+}
+
+#bar-clock-board {
+    position: absolute;
+    height: 100%;
+    text-align: center;
+    font-size: 8rem;
+    background-color: #2E7D32;
+    width: 0;
+    color: #BDBDBD;
+    line-height: 100%;
+}
+
+.bar-clock-overlay-time {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    text-align: center;
+    color: #BDBDBD;
+    font-size: 8rem;
+    padding: 3rem 10px 0rem;
+    z-index: 10;
+    line-height: 80%;
+}
+
+.bar-clock-overlay-label {
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    margin-top: 8rem;
+    text-align: center;
+    color: #BDBDBD;
+    font-size: 1.5rem;
+    padding: 3rem 10px 0rem;
+    z-index: 20;
+    line-height: 20%;
+}
+
+.bar-contract-overlay-text {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    text-align: center;
+    color: black;
+    font-size: 6rem;
+    padding: 3rem 10px 0rem;
+    z-index: 10;
+    line-height: 80%;
+}
+
+.bar-contract-overlay-label {
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    margin-top: 8rem;
+    text-align: center;
+    color: black;
+    font-size: 1.5rem;
+    padding: 3rem 10px 0rem;
+    z-index: 20;
+    line-height: 20%;
+}

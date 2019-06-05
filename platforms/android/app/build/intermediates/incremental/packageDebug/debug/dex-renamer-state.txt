@@ -1,0 +1,4 @@
+#Tue Mar 19 21:39:26 CET 2019
+base.0=J\:\\PhoneGapApps\\BiddingBox04\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex

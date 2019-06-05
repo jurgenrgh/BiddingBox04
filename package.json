@@ -1,0 +1,33 @@
+{
+    "name": "com.phonegap.helloworld",
+    "version": "1.0.0",
+    "description": "This is gives boilerplate app using materialize, jQuery, material fonts, bluetooth plugin.",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jurgenrgh/phonegap-bt-template"
+    },
+    "main": "index.js",
+    "keywords": [
+        "ecosystem:cordova",
+        "cordova:template"
+    ],
+    "author": "Jürgen Rennenkampff",
+    "license": "Apache-2.0",
+    "displayName": "helloworld",
+    "dependencies": {
+        "cordova-android": "^7.1.4",
+        "cordova-plugin-file-transfer": "1.5.1",
+        "cordova-plugin-media": "2.2.0",
+        "cordova-plugin-media-capture": "1.2.0",
+        "cordova-plugin-networking-bluetooth": "1.0.3",
+        "device": "0.3.9",
+        "devices": "0.1.0"
+    },
+    "cordova": {
+        "plugins": {
+            "cordova-plugin-media-capture": {},
+            "cordova-plugin-file-transfer": {},
+            "cordova-plugin-media": {}
+        }
+    }
+}
