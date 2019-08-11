@@ -1,4 +1,4 @@
-//This is a js file intended solely for the BluetoothSettings.html module
+//A js file intended solely for the BluetoothSettings.html module
 //
 /*jshint esversion: 6 */
 ///////////////////////////////////////////////////////////////////////////////
@@ -248,35 +248,33 @@ function makeBtConnection() {
             console.log("Connect server next tabIx = ", tabIx, tablet[tabIx]);
             setBtConnectionState("server", "waiting");
             startBtListening(tabIx);
-        }
-        else{
-            popupBox("All the Clients are already Connected", "", "redundant-connect", "OK", "","");
+        } else {
+            popupBox("All the Clients are already Connected", "", "redundant-connect", "OK", "", "");
         }
     } else { //this is a client
         console.log("Branch Client Calling", thisTabletIx, tablet[thisTabletIx]);
-        if ((thisTabletIx == 1) && (tablet[1].socket < 0)){
+        if ((thisTabletIx == 1) && (tablet[1].socket < 0)) {
             client = "client1";
             setBtConnectionState("client1", "waiting");
             setBtConnectionState("client2", "unset");
             setBtConnectionState("client3", "unset");
         }
-        if ((thisTabletIx == 2)&& (tablet[2].socket < 0)) {
+        if ((thisTabletIx == 2) && (tablet[2].socket < 0)) {
             client = "client2";
             setBtConnectionState("client1", "unset");
             setBtConnectionState("client2", "waiting");
             setBtConnectionState("client3", "unset");
         }
-        if ((thisTabletIx == 3) && (tablet[3].socket < 0)){
+        if ((thisTabletIx == 3) && (tablet[3].socket < 0)) {
             client = "client3";
             setBtConnectionState("client1", "unset");
             setBtConnectionState("client2", "unset");
             setBtConnectionState("client3", "waiting");
         }
-        if(client != "" ){
+        if (client != "") {
             chainBtClientConnection();
-        }
-        else{
-            popupBox("This Tablet is already Connected", "", "redundant-connect", "OK", "","");
+        } else {
+            popupBox("This Tablet is already Connected", "", "redundant-connect", "OK", "", "");
         }
     }
 }
@@ -655,10 +653,6 @@ function findNextUnconnectedClient() {
     //console.log("Find unconnected client tabIx ", tabIx);
     return tabIx;
 }
-
-
-
-
 
 ////////////////////////////////////////////////////////////////////////////////
 // Test Functions  /////////////////////////////////////////////////////////////

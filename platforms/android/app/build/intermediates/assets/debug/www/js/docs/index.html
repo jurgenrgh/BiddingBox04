@@ -560,6 +560,16 @@
               
                 
                 <li><a
+                  href='#boardclasstest'
+                  class="">
+                  boardClassTest
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#handlenewboard'
                   class="">
                   handleNewBoard
@@ -5651,6 +5661,55 @@ client connection using the appropriate uuid <br></p>
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='boardclasstest'>
+      boardClassTest
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>A Test Routine called by Button Trigger on the Player Page
+Output to console.log</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>boardClassTest()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
     <h3 class='fl m0' id='handlenewboard'>
       handleNewBoard
     </h3>
@@ -5664,6 +5723,10 @@ If this is the controlling tablet send a message to each of the other 3 tablets 
 All four are then initialized <br>
 All four are alerted by a popup, the bidder is asked to bid <br>
 boardNbr and bidderIx were already set <br></p>
+<p>On the contolling tablet the sequence is: <br>
+PopUp "new-board" -> Yes -> SelectNewBoard() -> SendNewBoardNotice() -> StartNewBoard() <br></p>
+<p>On the receiving Tablets:
+PopUp -> startNewBoard()</p>
 
  
   
@@ -5763,7 +5826,7 @@ All 4 boards the will call startNewBoard <br></p>
   
 
   <p>Called from selectNewBoard after all 4 tablets have been notified <br>
-Called on each tablet</p>
+Called on each tablet, either after sending or receiving notice</p>
 
  
   

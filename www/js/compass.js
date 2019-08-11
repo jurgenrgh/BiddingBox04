@@ -1,9 +1,7 @@
-//////////////////////////////////////////////////////////////////////
-// The "Compass" is an SVG that appears at the upper lh corner
-// of the Bidding Box Page
-//////////////////////////////////////////////////////////////////// 
 /**
  * @description
+ * The "Compass" is an SVG that appears at the upper lh corner
+ * of the Bidding Box Page
  * Redraw the Compass svg using current values of <br>
  * the globals for board, table etc. <br>
  * This is a refresh action callable at any time (even periodically) <br>
