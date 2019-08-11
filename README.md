@@ -40,3 +40,10 @@ Connection from server to the first client works, connection to more clients doe
 This is the status of the 121218 Backup. The plan is to assign distinct uuid's to the 3 clients. 
 The director assigns the seat and N,E,S,W as before; i.e. clientId, server not bound to seat.   
 
+### Phonegap Setup, Compilation, Download, Debug Setup
+This needs a detailed description with references since not easy to reconstruct.
+
+### Documentation
+There is an attempt to use automated documentation: run BiddingBox04/makedocs.sh  
+This will extract all of the yaml formatted commentary in the js files in ./www/js  
+and generates the output file ./www/js/docs/index.html

@@ -66,7 +66,10 @@ class Board {
         this.nbrBids++;
     }
 }
-
+/**
+* A Test Routine called by Button Trigger on the Player Page
+* Output to console.log
+*/
 function boardClassTest(){
     var test = [];
     var boardNbr = 3;
