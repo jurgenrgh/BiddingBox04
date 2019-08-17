@@ -4,11 +4,13 @@
  */
 /**
  * The app: a pure function representing the whole thing <br>
- * Does a number of initializations, namely <br>
+ * It does a number of initializations, namely <br>
  * - Waits for 'deviceready' signal <br>
- * - Adds listeners  <br>
+ * - Adds listeners, in particular for 'deviceready' Event  <br>
+ * - onDeviceReady calls receivedEvent function, which
+ * - Sets up Bluetooth listeners for onReceive and onAccept, then
  * - Calls getBtDevices for Bluetooth initialization <br>
- * - Does initial setup of Bidding Box Page etc <br>
+ * - Does initial setup of Bidding Box Page, Board Display Page, Clock Screen <br>
  */
 var app = {
     // Application Constructor
@@ -29,7 +31,7 @@ var app = {
     onDeviceReady: function () {
       app.receivedEvent('deviceready');
     },
-    // Update DOM on a Received Event
+    // Update DOM on a 'deviceready' Event
     receivedEvent: function (id) {
       console.log('Received Event: ' + id);
       console.log("window width: ", window.innerWidth, "window height: ", window.innerHeight);

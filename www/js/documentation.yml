@@ -91,7 +91,6 @@ toc:
       - hiliteBiddingRecordCell
       - unhiliteBiddingRecordCell
       - makeBiddingRecordEntry
-  
   - name: director.js
     description: 
       A seperate table for all of the director controls

@@ -1224,9 +1224,7 @@ Selecting a selected button will undo all current choices <br></p>
 
   
 
-  <p>Called when any "Call" button is clicked.
-A call is anything on the 3rd row of buttons, namely X, XX, Pass, Alert but
-not Submit (the check symbol), which is handled separately</p>
+  <p>Called when any "Call" button is clicked</p>
 
  
   
@@ -1287,8 +1285,9 @@ not Submit (the check symbol), which is handled separately</p>
 
   
 
-  <p>Confirms that the selected call is to be submitted
-By clicking the Check symbol (lrh button)</p>
+  <p>The submit-button (check symbol) has been selected
+Now if it is not this bidders turn - popup
+Otherwise call confirmSelectedBid()</p>
 
  
   
@@ -1441,12 +1440,7 @@ of bStat. Retracting this bid this requires</p>
   
 
   <p>The bidder has pressed the submit button (check symbol in BB)
-Now he is asked "are you sure" in different ways depending
-upon the bidding phase; namely, passout, final contract, or
-continuing.
-This function is called after the submit button is clicked but
-before any other action
-The reconfirmation is called, if required, and then acceptLocalBid()</p>
+Here the reconfirmation is called, if required, and then acceptLocalBid()</p>
 
  
   
@@ -1543,7 +1537,12 @@ The bid is recorded and sent to the other tablets.</p>
 
   
 
-  <p>Not clear what needs to happen here</p>
+  <p>Action when the last bid has been confirmed
+Needs review of correctness and procedure</p>
+<ul>
+<li>during play</li>
+<li>to restart the bidding</li>
+</ul>
 
  
   
@@ -4292,12 +4291,14 @@ This is a refresh action callable at any time (even periodically) <br></p>
   
 
   <p>The app: a pure function representing the whole thing <br>
-Does a number of initializations, namely <br></p>
+It does a number of initializations, namely <br></p>
 <ul>
 <li>Waits for 'deviceready' signal <br></li>
-<li>Adds listeners  <br></li>
+<li>Adds listeners, in particular for 'deviceready' Event  <br></li>
+<li>onDeviceReady calls receivedEvent function, which</li>
+<li>Sets up Bluetooth listeners for onReceive and onAccept, then</li>
 <li>Calls getBtDevices for Bluetooth initialization <br></li>
-<li>Does initial setup of Bidding Box Page etc <br></li>
+<li>Does initial setup of Bidding Box Page, Board Display Page, Clock Screen <br></li>
 </ul>
 
  

@@ -61,13 +61,11 @@ function handleSuitBid(idSuit) {
     updateBiddingRecord();
     checkEnableSubmit();
 }
-///////////////////////////////////////////////////////////////////////////////
-// A call is anything on the 3rd row of buttons, namely X, XX, Pass, Alert but
-// not Submit (the check symbol), which is handles separately
-//
 
 /**
- * Called when any "Call" button is clicked 
+ * Called when any "Call" button is clicked. 
+ * A call is anything on the 3rd row of buttons, namely X, XX, Pass, Alert but
+ * not Submit (the check symbol), which is handled separately
  * @param {string} idCall
  */
 function handleCalls(idCall) {
@@ -142,10 +140,12 @@ function handleCalls(idCall) {
         }
     }
 }
-///////////////////////////////////////////////////////////////////////////////
-// Confirms that selected bid is made
-// Check-symbol lrh button
-//
+
+/**
+* @description
+* Confirms that the selected call is to be submitted
+* By clicking the Check symbol (lrh button)
+*/
 function handleSubmitCall() {
     if (bStat.boxOpen == false) {
         popupBoxTimed("It's not your turn", "", "", "OK", fastPopupTimeout);
@@ -193,18 +193,15 @@ function cancelCurrentBid() {
     prepBidBox();
 }
 
-///////////////////////////////////////////////////////////////////////////////
-// The bidder has pressed the submit button (check symbol in BB)
-// Now he is asked "are you sure" in different ways depending
-// upon the bidding phase; namely, passout, final contract, or
-// continuing.
-// This function is called after the submit button is clicked but
-// before any other action
-/////////////////////////////////////////////////////////////////////////////////
 /**
  * @description
  * The bidder has pressed the submit button (check symbol in BB)
- * Here the reconfirmation is called, if required, and then acceptLocalBid()
+ * Now he is asked "are you sure" in different ways depending
+ * upon the bidding phase; namely, passout, final contract, or
+ * continuing.
+ * This function is called after the submit button is clicked but
+ * before any other action
+ * The reconfirmation is called, if required, and then acceptLocalBid()
  */
 function confirmSelectedBid() {
     if (reconfirmBidSubmission) {
@@ -260,6 +257,10 @@ function acceptLocalBid() {
     }
 }
 
+/**
+ * @description
+ * Not clear what needs to happen here
+ */
 function handleFinalContract() {
     var contract = getContract();
     enableBBControlInput();

@@ -61,8 +61,9 @@ function initDirSettingsPage() {
         document.getElementById("tray-ew").checked = true;
     }
 
+    ////////////////////////////////////////////////////////////////
     //Player Settings
-    ///////////////////
+    ///////////////////////////////////////////////////////////////
     if (notifyNewBid == true) {
         document.getElementById("radio-new-bid-notify").checked = true;
     }
