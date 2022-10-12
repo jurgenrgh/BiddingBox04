@@ -18,7 +18,7 @@
         "autoprefixer": "^9.6.1",
         "browserslist": "^4.6.6",
         "caniuse-lite": "^1.0.30000989",
-        "cordova-android": "^7.1.4",
+        "cordova-android": "^11.0.0",
         "cordova-plugin-file-transfer": "1.5.1",
         "cordova-plugin-media": "2.2.0",
         "cordova-plugin-media-capture": "1.2.0",
